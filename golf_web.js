@@ -9,8 +9,8 @@ gsap.to("#navbar", {
         trigger:"#navbar",
         scroller:"body",
         // markers: true,
-        start: "top -10px",
-        end: "top -30px",
+        start: "top -20px",
+        end: "top -20px",
         scrub: .7
     }
 })
@@ -54,16 +54,70 @@ document.addEventListener("mousemove",(movement) => {
     cursor2.style.left = left + "px" 
     cursor2.style.top = top +"px"
 
-    // cursor1.animate({
-    //     left: left + "px",
-    //     top: top + "px"
-    // },{
-    //     duration: 100, fill: "forwards"
-    // })
+    cursor1.animate({
+        left: left + "px",
+        top: top + "px"
+    },{
+        duration: 400, fill: "forwards"
+    })
     cursor2.animate({
         top: top + "px",
         left: left + "px"
     },{
         duration: 4000, fill: "forwards"
     })
+})
+
+// cursor hover properties
+
+const hovercursor = document.querySelectorAll(".hovercursor")
+
+
+hovercursor.forEach(function (element){
+    element.addEventListener("mouseenter", ()=>{
+        cursor1.animate({
+            backgroundColor: "transparent",
+            height: "80px",
+            width: "80px",
+            border: "1.5px solid white"
+        },{
+            duration: 350, fill: "forwards"
+        })
+    
+    })
+})
+hovercursor.forEach(function (element){
+    element.addEventListener("mouseleave", ()=>{
+        cursor1.animate({
+            backgroundColor: "#a2d122",
+            height: "20px",
+            width: "20px",
+            border: "none"
+        },{
+            duration: 200, fill: "forwards"
+        })
+
+    })
+})
+
+// nav content color black on hover 
+
+let heading = document.querySelectorAll(".blackin")
+let navbar = document.getElementById("navbar")
+
+heading.forEach(function (elem){
+   elem.addEventListener("mouseenter", () =>{
+        if(navbar.style.backgroundColor == "black"){
+            elem.style.color = "#a2d122"
+        }
+        else{
+            elem.style.color = "black"
+
+        }
+   }) 
+})
+heading.forEach(function (elem){
+   elem.addEventListener("mouseleave", () =>{
+        elem.style.color = "white"
+   }) 
 })

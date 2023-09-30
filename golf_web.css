@@ -11,9 +11,20 @@ body, html{
     height: 100%;
     
 }
+#right-nav>a{
+    height: 68px;
+    width: 100px ;
+}
 #logo-img{
     height: 68px;
     padding: 0 12px;
+    transition: all .2s ease;
+    transform-origin: right bottom;
+
+}
+#logo-img:hover{
+    scale: 0.95;
+
 }
 #navbar{
     display: flex;
@@ -31,9 +42,11 @@ body, html{
     column-gap: 27px;
     font-size: 0.77rem;
 }
-#heading{
-    font-weight: 400 ;
-
+h3 >a{
+    text-decoration: none;
+    font-weight: 500 ;
+    padding: 10px 0 10px 0;
+    cursor: pointer;
 }
 #left-nav-buttons{
     display: flex;
@@ -41,15 +54,26 @@ body, html{
     column-gap: 7px;
 
 }
-#nav-button2, #nav-button1{
-    height: max-content;
-    /* padding: 10px 5px; */
-    border: 3px solid #95c11e;
+.hero-btn{
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: 3px solid #a2d122;
     background-color: black;
     border-radius: 50px;
     color: white;
-    padding: 14px 39px;
+    padding: 12px 34px;
+    font-weight: 400;
+    display: block;
+    width: fit-content;
 }
+.hero-btn:hover{
+    font-weight: 500;
+    background: #a2d122;
+    color: black;
+    transition: all 0.4s ease-in;
+
+}
+
 video{
     width: 100%;
     height: 100%;
@@ -246,6 +270,7 @@ color: #95c11e;
     column-gap: 55px;
     flex-wrap: wrap;
     z-index: 12;
+    margin-bottom: 100px;
 }
 .card{
     width: 380px;
@@ -276,7 +301,7 @@ color: #95c11e;
     
 }
 .bg-text-cards{
-    background-color: #b5e633;
+    background-color: #9ece1c;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -335,7 +360,7 @@ color: #95c11e;
 }
 .middle-footer{
     position: relative;
-    margin: 100px 0;
+    margin-bottom: 100px;
     width: 100%;
     height: 250px;
     background-image: linear-gradient(to top right, #B3E824 , #95c11e, #039c3d);
@@ -348,4 +373,50 @@ color: #95c11e;
 .middle-footer img{
     width: 12%;
     filter: opacity(30%);
+}
+
+.food-drink{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px ;
+    z-index: 10;
+}
+.food-img-box::after{
+    content: "";
+    position: relative;
+    display: block;
+    height: 430px;
+    background-image: linear-gradient(to top ,#b4e82450, transparent );
+    width: 100%;
+    border-radius: 12px;
+    z-index: 10;
+}
+.food-img-box{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/cafe-about-1.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+    background-position: 0 -350px;
+    background-size: cover;
+    height: 430px;
+    width: 45%;
+    overflow: hidden;
+    border-radius: 12px;
+}
+.food-aside{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.food-heading{
+    font-size: 2.1rem;
+    font-weight: 800;
+}
+.food-aside > p{
+    font-size: 1.1rem;
+    line-height: 29px;
+    word-spacing: 2px;
+}
+.img-slider{
+    margin: 150px 0;
 }
