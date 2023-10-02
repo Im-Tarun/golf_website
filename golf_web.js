@@ -121,3 +121,62 @@ heading.forEach(function (elem){
         elem.style.color = "white"
    }) 
 })
+
+// image scrolltrigger
+
+gsap.from("#card-1, #card-2, #card-3",{
+    scale: 0.1,
+    y: 250,
+    opacity:0,
+    stagger: 3,
+    duration: 10,
+    scrollTrigger:{
+        trigger: "#card-trigger",
+        scroller: "body",
+        // markers: true,
+        scrub: 3,
+        start:" 39%",
+        end:" 34%",
+    }
+
+})
+gsap.to("#card-1, #card-2, #card-3",{
+    y:0,
+    scale:1,
+    opacity:1,
+})
+
+
+//three large button functioning
+
+let big_btn = document.querySelectorAll(".big-buttons")
+let bact_txt = document.getElementById("btn-back-text")
+
+big_btn.forEach((box) =>{
+    box.addEventListener("mouseenter",() =>{
+        bact_txt.style.textShadow = "1px 1px 0 #95c11e,-1px -1px 0 #95c11e,-1px 1px 0 #95c11e, 1px -1px 0 #95c11e "
+    })
+})
+big_btn.forEach((box) =>{
+    box.addEventListener("mouseleave",() =>{
+        bact_txt.style.textShadow = "1px 1px 0 white,-1px -1px 0 white,-1px 1px 0 white, 1px -1px 0 white "
+    })
+})
+
+// back text translate on scroll
+
+gsap.to("#btn-back-text", {
+    y: -140,
+    scrollTrigger:{
+        trigger:".big-buttons",
+        scroller:"body",
+        // markers: true,
+        start: "top 90%",
+        end: "top 90%",
+        scrub: 1.5
+    }
+})
+
+// project closed 
+
+
