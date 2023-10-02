@@ -94,14 +94,13 @@ video{
     z-index: -10000;
 }
 main{
-    background-color: rgba(0, 0, 0, 0.349);
     /* position: relative;  
     z-index: -500; */
-
+    background-color: #0000002f;
 }
 #bottom-gradient{
     position: fixed;
-    height: 300px;
+    height: 250px;
     width: 100%;
     /* background-color: red; */
     bottom: 0;
@@ -439,7 +438,7 @@ color: #95c11e;
     width: 85%;
     z-index: 10;
     height: 300px;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 .collen-para{
     height: 100%;
